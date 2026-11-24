@@ -14,6 +14,9 @@ struct ContentView: View {
 
             VStack(spacing: 0) {
                 header
+                Label("Prototype · données de démonstration", systemImage: "info.circle")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
 
                 TabView(selection: $selectedTab) {
                     CommandCenterView(sessionMinutes: $sessionMinutes, guardianName: guardianName)
@@ -480,5 +483,5 @@ private extension View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: [OffGridUser.self, SocialKey.self, RestrictionGoal.self, AvatarProfile.self], inMemory: true)
+
 }
