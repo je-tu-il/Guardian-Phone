@@ -14,9 +14,6 @@ struct ContentView: View {
 
             VStack(spacing: 0) {
                 header
-                Label("Prototype · données de démonstration", systemImage: "info.circle")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
 
                 TabView(selection: $selectedTab) {
                     CommandCenterView(sessionMinutes: $sessionMinutes, guardianName: guardianName)
@@ -259,9 +256,9 @@ private struct GuardianKeyCard: View {
                 .foregroundStyle(.white.opacity(0.68))
                 .fixedSize(horizontal: false, vertical: true)
             HStack(spacing: 10) {
-                FlowPill(text: "Request", symbol: "paperplane.fill")
-                FlowPill(text: "Review", symbol: "eye.fill")
-                FlowPill(text: "Token", symbol: "checkmark.seal.fill")
+                FlowPill(text: "Requête", symbol: "paperplane.fill")
+                FlowPill(text: "Validation", symbol: "eye.fill")
+                FlowPill(text: "Jeton", symbol: "checkmark.seal.fill")
             }
         }
         .padding(18)
@@ -429,7 +426,7 @@ private struct HardLogoutOverlay: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.white.opacity(0.68))
             Button(action: onContinue) {
-                Text("Compris — voir la démo")
+                Text("Compris — continuer")
                     .font(.headline.weight(.bold))
                     .foregroundStyle(.black)
                     .frame(maxWidth: .infinity)
